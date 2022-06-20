@@ -58,7 +58,23 @@ router.post("/", (req, res) => {
 });
 
 //UPDATE USER
-router.put("/:id", (req, res) => {});
+router.put("/:id", (req, res) => {
+  User.update(req.body, {
+    individualHooks: true,
+    where: { id: req.params.id },
+  })
+    .then((dbUserData) => {
+      if (!dbUserData) {
+        res.status(404).json({ message: "User not found" });
+        return;
+      }
+      res.json(dbUserData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 // DELETE USER
 router.delete("/:id", (req, res) => {
