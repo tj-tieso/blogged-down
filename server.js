@@ -24,12 +24,12 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public"))); // take all of the contents "public" folder and serve them as static assets
-// // hb middleware
-// app.engine("handlebars", hbs.engine);
-app.set("view engine", "handlebars");
 
 app.use(session(sess));
-const hbs = exphbs.create({}); // helpers go here
+const helpers = require("./utils/helpers");
+const hbs = exphbs.create({ helpers });
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
 
 app.use(routes);
 
