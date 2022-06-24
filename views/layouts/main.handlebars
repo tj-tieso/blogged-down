@@ -6,21 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blogged Down</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+  />
 </head>
 
 <body>
   <div class="wrapper">
     <header>
-      <h1>
-        <a href="/">Blogged Down</a>
-      </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a href="/dashboard">Dashboard</a>
-        <button id="logout" class="btn-no-style">Logout</button>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
+      <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container-fluid text-dark">
+          <a href="/" class="text-dark"><h1>Blogged Down</h1></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              {{#if loggedIn}}
+              <li class="nav-item">
+                <a class="nav-link active text-dark" aria-current="page" href="/dashboard">DASHBOARD</a>
+              </li>
+              <li class="nav-item">
+                <button id="logout" class="nav-link text-dark btn btn-link">LOGOUT</button>
+              </li>
+              {{else}}
+              <li class="nav-item">
+                <a class="nav-link" href="/login">LOGIN</a>
+              </li>
+              {{/if}}
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
     <main>
