@@ -1,17 +1,17 @@
 <section class="d-flex flex-column px-3">
   <h2 class="pt-3">Create New Post</h2>
 
-  <form class="new-post-form">
-    <div>
+  <form class="new-post-form px-3">
       <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
     <div>
-      <label for="post-content">Content</label>
-      <textarea type="text" id="post-content" name="post-content"></textarea>
+      <input type="text" id="post-title" name="post-title" class="w-25"/>
     </div>
+      <label for="post-content">Content</label>
+    <div>
+      <textarea type="text" id="post-content" name="post-content" class="w-100"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
   </form>
-    <button type="submit" class="btn btn-primary w-25 mx-3">Create</button>
 </section>
 
 {{#if posts.length}}
@@ -21,7 +21,7 @@
     {{#each posts as |post|}}
     <li class="flex flex-column">
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link btn btn-primary w-25 mx-3">Edit post</a>
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link btn btn-primary mx-3">Edit post</a>
     </li>
     {{/each}}
   </ul>
