@@ -12,7 +12,9 @@
 </form>
 {{/if}}
 
+{{#if post.comments.length}}
 {{> comments post.comments}}
+{{/if}}
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
