@@ -1,5 +1,5 @@
-<section>
-  <h2>Create New Post</h2>
+<section class="d-flex flex-column px-3">
+  <h2 class="pt-3">Create New Post</h2>
 
   <form class="new-post-form">
     <div>
@@ -7,24 +7,24 @@
       <input type="text" id="post-title" name="post-title" />
     </div>
     <div>
-      <label for="post-url">Content</label>
-      <input type="text" id="post-content" name="post-content" />
+      <label for="post-content">Content</label>
+      <textarea type="text" id="post-content" name="post-content"></textarea>
     </div>
-    <button type="submit" class="btn">Create</button>
   </form>
+    <button type="submit" class="btn btn-primary w-25 mx-3">Create</button>
 </section>
 
 {{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol style="list-style-type:none">
+<section class="pt-3">
+  <h2 class="text-dark px-3">Your Posts</h2>
+  <ul class="post-list px-3" style="list-style-type:none">
     {{#each posts as |post|}}
-    <li>
+    <li class="flex flex-column">
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link btn btn-primary w-25 mx-3">Edit post</a>
     </li>
     {{/each}}
-  </ol>
+  </ul>
 </section>
 {{/if}}
 
