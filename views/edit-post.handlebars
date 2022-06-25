@@ -6,10 +6,10 @@
 
   <form class="edit-post-form px-3">
     <div class="pt-2">
-      <input name="post-title" type="text" class="pt-2" value="{{post.title}}" />
+      <input name="post-title" type="text" value="{{post.title}}" />
     </div>
     <div>
-      <textarea name="post-content" class="w-100" value="{{post.post_content}}"> {{post.post_content}} </textarea>
+      <textarea name="post-content" class="w-100 h-25 mt-2" value="{{post.post_content}}"> {{post.post_content}} </textarea>
     </div>
     <div class="pt-2">
       <a href="/post/{{post.id}}" class="pt-2">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
@@ -27,3 +27,4 @@
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
 <script src="/javascript/comment.js"></script>
+<script src="/javascript/logout.js"></script>

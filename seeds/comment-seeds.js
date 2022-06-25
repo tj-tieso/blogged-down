@@ -26,7 +26,7 @@ const commentData = [
   {
     comment_text: "In hac habitasse platea dictumst.",
     user_id: 4,
-    post_id: 5,
+    post_id: 3,
   },
   {
     comment_text: "Vivamus vestibulum sagittis sapien.",
@@ -42,7 +42,7 @@ const commentData = [
   {
     comment_text: "Sed vel enim sit amet nunc viverra dapibus.",
     user_id: 1,
-    post_id: 5,
+    post_id: 4,
   },
 ];
 
