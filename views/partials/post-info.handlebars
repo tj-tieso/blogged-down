@@ -1,8 +1,8 @@
-<article class="post">
-  <div class="title">
-    <a href="/post/{{id}}">{{title}}</a>
+<article class="post p-3 m-3 mw-75 bg-light border">
+  <div class="title m-1">
+    <a href="/post/{{id}}"><h3>{{title}}</h3></a>
   </div>
-  <div class="meta">
+  <div class="meta m-1 border-bottom border-dark">
     by
     {{user.username}}
     on
@@ -12,5 +12,5 @@
       {{format_plural "comment" comments.length}}
     </a>
   </div>
-  <div class="post-content"> {{post_content}}</div>
+  <div class="post-content text-wrap m-1"> {{post_content}}</div>
 </article>
