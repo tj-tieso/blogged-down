@@ -17,13 +17,11 @@ This app follows the MVC architectural structure, using Handlebars.js as the tem
 
 ## Website
 
-Follow [this link]() to the deployed application!
+Follow [this link](https://blogged-down.herokuapp.com/) to the deployed application!
 
 ## Usage
 
-Use this app to publish blog posts as well as comment on other developers' posts!
-
-![image]()
+Use this app to publish blog posts of your TTRPG sessions as well as comment on other players' posts!
 
 ## Technologies
 
