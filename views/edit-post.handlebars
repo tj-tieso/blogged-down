@@ -17,19 +17,12 @@
     <button type="submit" class="btn btn-primary pt-2 mt-1">Save post</button>
     <button type="button" class="delete-post-btn btn btn-danger pt-2  mt-1">Delete post</button>
   </form>
-
-  {{!-- make this into edit content --}}
   
-
-
-    <div>
-      <button type="submit" class="btn btn-primary pt-2">add comment</button>
-    </div>
-
-
 </article>
 
+{{#if post.comments.length}}
 {{> comments post.comments}}
+{{/if}}
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
